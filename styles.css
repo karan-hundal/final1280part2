@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 1200px;
+  margin: auto;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  flex: 3;
+  flex-wrap: wrap;
+  background-color: #8a8989;
+  padding: 10px;
+  text-align: center;
+  height: 60px;
+}
+.logo{
+  float: left;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.topnav {
+  
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: blue;
+  color: #fffefe;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  
+  color: #faf9f9;
+}
+
+.left, .right, .middle {
+  float: left;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;}
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;}
+    
+    .flip-card-front {
+      background-color: #bbb;
+      color: black;}
+
+      .flip-card-back {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+      }
+
+/* Style the footer */
+.footer {
+  clear: left;
+  flex: 3;
+  flex-wrap: wrap;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  background-color: rgb(147, 184, 190);
+  color: white;
+  text-align: center;
+  margin-top: 300px;
+}
+
+@media only screen and (max-width: 1000px)
+{
+  .header{
+    display: flex;
+    flex-wrap: wrap;
+    flex: auto;
+  }
+  .topnav{
+    float: right;
+    margin: right 200px; 
+  }
+  .logo{
+    float: left;
+  }
+  .grid-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 3;
+    
+  }
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 3;
+  }
+  .left{
+    margin-left: 130px;
+  }
+  .middle{
+    margin-right: 130px;
+  }
+   .right{
+    margin-top: 100px;
+    align-items: center;
+    margin-left: 240px;
+  }
+  .footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 3;
+    margin-top: 100px;
+  }
+}
+
+
+
